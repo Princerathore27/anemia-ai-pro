@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+anemia_env/
+
+# Models (large files)
+models/
+
+# Dataset images (optional if large)
+images/
+
+# CSV files (optional)
+*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
