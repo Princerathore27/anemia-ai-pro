@@ -1,180 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AnemiaAI Pro</title>
+<div class="section">
+<h2>🎯 Live Demo</h2>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<p>You can run this project locally using the following steps:</p>
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-}
-
-.container {
-    padding: 40px 20px;
-}
-
-h1 {
-    font-size: 3rem;
-    animation: fadeIn 2s ease-in-out;
-}
-
-h2 {
-    color: #00d4ff;
-}
-
-.section {
-    margin-top: 60px;
-}
-
-.features, .screenshots {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 15px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.btn {
-    padding: 12px 25px;
-    background: #00d4ff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 10px;
-}
-
-.btn:hover {
-    background: white;
-}
-
-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-@keyframes fadeIn {
-    from {opacity:0;}
-    to {opacity:1;}
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>🩸 AnemiaAI Pro</h1>
-<h2>AI-Based Non-Invasive Anemia Detection</h2>
-
-<p>
-Deep learning based system using DenseNet121, VGG16 & InceptionV3
-to detect anemia from eye images.
-</p>
-
-<button class="btn" onclick="window.location.href='https://github.com/Princerathore27/anemia-ai-pro'">
-View GitHub
+<div class="card">
+<p><b>Step 1:</b> Download the project</p>
+<button class="btn" onclick="window.open('https://github.com/Princerathore27/anemia-ai-pro/archive/refs/heads/master.zip')">
+Download ZIP
 </button>
-
-<!-- FEATURES -->
-<div class="section">
-<h2>🚀 Features</h2>
-<div class="features">
-
-<div class="card">
-<h3>🤖 AI Models</h3>
-<p>DenseNet121, VGG16, InceptionV3 Ensemble</p>
 </div>
 
 <div class="card">
-<h3>📊 Accuracy</h3>
-<p>Up to 100% accuracy achieved</p>
+<p><b>Step 2:</b> Open in VS Code</p>
+<p>Extract → Open folder in VS Code</p>
 </div>
 
 <div class="card">
-<h3>💻 GUI</h3>
-<p>Interactive Tkinter Desktop App</p>
-</div>
+<p><b>Step 3:</b> Run the project</p>
 
-<div class="card">
-<h3>⚡ CLI</h3>
-<p>Fast command-line predictions</p>
-</div>
+<pre style="background:black; color:#00ffcc; padding:10px; border-radius:10px;">
+python anemia_app_pro.py
+</pre>
 
-<div class="card">
-<h3>🔄 CI/CD</h3>
-<p>Automated using GitHub Actions</p>
-</div>
-
-<div class="card">
-<h3>🌐 Deployment</h3>
-<p>Live on GitHub Pages</p>
+<button class="btn" onclick="copyCommand()">Copy Command</button>
 </div>
 
 </div>
-</div>
 
-<!-- DEMO FLOW -->
-<div class="section">
-<h2>▶️ How It Works</h2>
-<p>
-1. Upload eye image → 2. Model processes → 3. Prediction shown (Anemic / Non-Anemic)
-</p>
-</div>
-
-<!-- SCREENSHOTS -->
-<div class="section">
-<h2>🖼️ Project Screenshots</h2>
-<div class="screenshots">
-
-<div class="card">
-<p>GUI Interface</p>
-<img src="https://via.placeholder.com/400x250" alt="GUI">
-</div>
-
-<div class="card">
-<p>Prediction Output</p>
-<img src="https://via.placeholder.com/400x250" alt="Output">
-</div>
-
-</div>
-</div>
-
-<!-- ARCHITECTURE -->
-<div class="section">
-<h2>🧠 Architecture</h2>
-<p>Input Image → Preprocessing → CNN Models → Ensemble → Output</p>
-</div>
-
-<!-- RUN -->
-<div class="section">
-<h2>⚙️ How to Run</h2>
-<p>1. Install dependencies: pip install -r requirements.txt</p>
-<p>2. Run GUI: python anemia_app_pro.py</p>
-<p>3. Or CLI: python predict.py</p>
-</div>
-
-<footer class="section">
-<p>Developed by: <b>Nausheen Parween & Anam</b></p>
-</footer>
-
-</div>
-
-</body>
-</html>
+<script>
+function copyCommand() {
+    navigator.clipboard.writeText("python anemia_app_pro.py");
+    alert("Command copied!");
+}
+</script>
