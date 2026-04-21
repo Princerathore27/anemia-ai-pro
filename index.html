@@ -1,148 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnemiaAI Pro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnemiaAI Pro</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
 
-        body {
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
-        }
+.container {
+    padding: 40px 20px;
+}
 
-        .container {
-            padding: 50px 20px;
-        }
+h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+h2 {
+    color: #00d4ff;
+}
 
-        h2 {
-            font-weight: 300;
-            margin-bottom: 20px;
-            color: #00d4ff;
-        }
+.section {
+    margin-top: 60px;
+}
 
-        p {
-            max-width: 700px;
-            margin: auto;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
+.features, .screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-            padding: 20px;
-        }
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
 
-        .card {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 15px;
-            transition: 0.3s;
-        }
+.card:hover {
+    transform: scale(1.05);
+}
 
-        .card:hover {
-            transform: scale(1.05);
-            background: rgba(255,255,255,0.2);
-        }
+.btn {
+    padding: 12px 25px;
+    background: #00d4ff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
 
-        .btn {
-            margin-top: 30px;
-            padding: 12px 25px;
-            border: none;
-            background: #00d4ff;
-            color: black;
-            font-size: 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.btn:hover {
+    background: white;
+}
 
-        .btn:hover {
-            background: white;
-        }
+img {
+    width: 100%;
+    border-radius: 10px;
+}
 
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-    </style>
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>🩸 AnemiaAI Pro</h1>
-        <h2>Non-Invasive Anemia Detection System</h2>
+<div class="container">
 
-        <p>
-            This project uses Deep Learning models like DenseNet121, VGG16, and InceptionV3 
-            to detect anemia from conjunctiva eye images with high accuracy.
-        </p>
+<h1>🩸 AnemiaAI Pro</h1>
+<h2>AI-Based Non-Invasive Anemia Detection</h2>
 
-        <button class="btn" onclick="window.location.href='https://github.com/Princerathore27/anemia-ai-pro'">
-            View GitHub Repository
-        </button>
+<p>
+Deep learning based system using DenseNet121, VGG16 & InceptionV3
+to detect anemia from eye images.
+</p>
 
-        <div class="features">
+<button class="btn" onclick="window.location.href='https://github.com/Princerathore27/anemia-ai-pro'">
+View GitHub
+</button>
 
-            <div class="card">
-                <h3>🤖 AI Models</h3>
-                <p>DenseNet121, VGG16, InceptionV3 with ensemble learning.</p>
-            </div>
+<!-- FEATURES -->
+<div class="section">
+<h2>🚀 Features</h2>
+<div class="features">
 
-            <div class="card">
-                <h3>📊 Accuracy</h3>
-                <p>Achieved up to 100% accuracy using ensemble approach.</p>
-            </div>
+<div class="card">
+<h3>🤖 AI Models</h3>
+<p>DenseNet121, VGG16, InceptionV3 Ensemble</p>
+</div>
 
-            <div class="card">
-                <h3>💻 GUI App</h3>
-                <p>Interactive desktop app using Tkinter for easy usage.</p>
-            </div>
+<div class="card">
+<h3>📊 Accuracy</h3>
+<p>Up to 100% accuracy achieved</p>
+</div>
 
-            <div class="card">
-                <h3>⚡ CLI Tool</h3>
-                <p>Fast prediction using command line interface.</p>
-            </div>
+<div class="card">
+<h3>💻 GUI</h3>
+<p>Interactive Tkinter Desktop App</p>
+</div>
 
-            <div class="card">
-                <h3>🔄 CI/CD</h3>
-                <p>Automated pipeline using GitHub Actions.</p>
-            </div>
+<div class="card">
+<h3>⚡ CLI</h3>
+<p>Fast command-line predictions</p>
+</div>
 
-            <div class="card">
-                <h3>🌐 Deployment</h3>
-                <p>Live website hosted using GitHub Pages.</p>
-            </div>
+<div class="card">
+<h3>🔄 CI/CD</h3>
+<p>Automated using GitHub Actions</p>
+</div>
 
-        </div>
+<div class="card">
+<h3>🌐 Deployment</h3>
+<p>Live on GitHub Pages</p>
+</div>
 
-        <footer>
-            <p>Developed by: <b>Nausheen Parween & Anam</b></p>
-        </footer>
+</div>
+</div>
 
-    </div>
+<!-- DEMO FLOW -->
+<div class="section">
+<h2>▶️ How It Works</h2>
+<p>
+1. Upload eye image → 2. Model processes → 3. Prediction shown (Anemic / Non-Anemic)
+</p>
+</div>
+
+<!-- SCREENSHOTS -->
+<div class="section">
+<h2>🖼️ Project Screenshots</h2>
+<div class="screenshots">
+
+<div class="card">
+<p>GUI Interface</p>
+<img src="https://via.placeholder.com/400x250" alt="GUI">
+</div>
+
+<div class="card">
+<p>Prediction Output</p>
+<img src="https://via.placeholder.com/400x250" alt="Output">
+</div>
+
+</div>
+</div>
+
+<!-- ARCHITECTURE -->
+<div class="section">
+<h2>🧠 Architecture</h2>
+<p>Input Image → Preprocessing → CNN Models → Ensemble → Output</p>
+</div>
+
+<!-- RUN -->
+<div class="section">
+<h2>⚙️ How to Run</h2>
+<p>1. Install dependencies: pip install -r requirements.txt</p>
+<p>2. Run GUI: python anemia_app_pro.py</p>
+<p>3. Or CLI: python predict.py</p>
+</div>
+
+<footer class="section">
+<p>Developed by: <b>Nausheen Parween & Anam</b></p>
+</footer>
+
+</div>
 
 </body>
 </html>
