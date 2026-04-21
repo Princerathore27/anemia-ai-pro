@@ -8,11 +8,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+:root {
+    --bg: #0f2027;
+    --text: white;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* LIGHT MODE */
+.light {
+    background: #f5f5f5;
+    color: black;
 }
 
 /* HERO */
@@ -21,36 +33,16 @@ body {
     padding: 80px 20px;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero p {
-    max-width: 600px;
-    margin: auto;
-    opacity: 0.8;
-}
-
 .btn {
-    margin: 10px;
     padding: 12px 25px;
     border-radius: 25px;
     border: none;
+    margin: 10px;
     background: #00d4ff;
     cursor: pointer;
 }
 
-.btn:hover {
-    background: white;
-}
-
-/* GLASS CARDS */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -60,141 +52,90 @@ body {
 
 .card {
     background: rgba(255,255,255,0.1);
-    border-radius: 15px;
     padding: 20px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+    border-radius: 15px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+/* GRAPH */
+.bar {
+    background: #00d4ff;
+    height: 20px;
+    margin: 10px 0;
 }
 
-/* STATS */
-.stats {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.stat {
-    margin: 20px;
-}
-
-.stat h2 {
-    color: #00d4ff;
-}
-
-/* CODE BLOCK */
-pre {
-    background: black;
-    color: #00ffcc;
-    padding: 15px;
+/* VIDEO */
+iframe {
+    width: 80%;
+    height: 400px;
     border-radius: 10px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-    from {opacity:0;}
-    to {opacity:1;}
+/* TOGGLE */
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>🩸 AnemiaAI Pro</h1>
-    <p>AI-powered system to detect anemia using eye images with deep learning.</p>
+<button class="btn toggle" onclick="toggleMode()">🌗 Toggle</button>
 
-    <button class="btn" onclick="window.open('https://github.com/Princerathore27/anemia-ai-pro')">GitHub</button>
-    <button class="btn" onclick="window.open('https://github.com/Princerathore27/anemia-ai-pro/archive/refs/heads/master.zip')">Download</button>
+<div class="hero">
+<h1>🩸 AnemiaAI Pro</h1>
+<p>AI-powered anemia detection system</p>
+
+<button class="btn" onclick="window.open('https://github.com/Princerathore27/anemia-ai-pro')">GitHub</button>
+<button class="btn" onclick="window.open('https://github.com/Princerathore27/anemia-ai-pro/archive/refs/heads/master.zip')">Download</button>
 </div>
 
-<!-- STATS -->
-<div class="section">
-    <h2>📊 Model Performance</h2>
-    <div class="stats">
-        <div class="stat">
-            <h2>100%</h2>
-            <p>VGG16 Accuracy</p>
-        </div>
-        <div class="stat">
-            <h2>99.46%</h2>
-            <p>DenseNet121</p>
-        </div>
-        <div class="stat">
-            <h2>96.7%</h2>
-            <p>InceptionV3</p>
-        </div>
-    </div>
+<!-- GRAPH -->
+<div class="grid">
+<div class="card">
+<h3>📊 Accuracy</h3>
+<p>VGG16 (100%)</p>
+<div class="bar" style="width:100%"></div>
+
+<p>DenseNet (99%)</p>
+<div class="bar" style="width:99%"></div>
+
+<p>Inception (96%)</p>
+<div class="bar" style="width:96%"></div>
+</div>
 </div>
 
 <!-- FEATURES -->
-<div class="section">
-    <h2>🚀 Features</h2>
-    <div class="grid">
-
-        <div class="card">
-            <h3>🤖 AI Models</h3>
-            <p>DenseNet, VGG, Inception Ensemble</p>
-        </div>
-
-        <div class="card">
-            <h3>💻 GUI</h3>
-            <p>Interactive Tkinter interface</p>
-        </div>
-
-        <div class="card">
-            <h3>⚡ CLI</h3>
-            <p>Fast command line predictions</p>
-        </div>
-
-        <div class="card">
-            <h3>🔄 CI/CD</h3>
-            <p>Automated pipeline using GitHub Actions</p>
-        </div>
-
-    </div>
+<div class="grid">
+<div class="card">🤖 AI Models</div>
+<div class="card">💻 GUI App</div>
+<div class="card">⚡ CLI Tool</div>
+<div class="card">🔄 CI/CD</div>
 </div>
 
-<!-- ARCHITECTURE -->
-<div class="section">
-    <h2>🧠 Architecture</h2>
-    <div class="card">
-        <p>
-        Image → Preprocessing → CNN Models → Ensemble → Prediction
-        </p>
-    </div>
+<!-- VIDEO -->
+<div class="grid">
+<div class="card">
+<h3>🎥 Demo Video</h3>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
 </div>
 
-<!-- LIVE DEMO -->
-<div class="section">
-    <h2>🎯 Run Locally</h2>
-
-    <div class="card">
-        <p>Install dependencies:</p>
-        <pre>pip install -r requirements.txt</pre>
-
-        <p>Run GUI:</p>
-        <pre>python anemia_app_pro.py</pre>
-
-        <button class="btn" onclick="copyCmd()">Copy Command</button>
-    </div>
+<!-- RUN -->
+<div class="grid">
+<div class="card">
+<h3>⚙️ Run Locally</h3>
+<pre>pip install -r requirements.txt</pre>
+<pre>python anemia_app_pro.py</pre>
+</div>
 </div>
 
 <script>
-function copyCmd(){
-    navigator.clipboard.writeText("python anemia_app_pro.py");
-    alert("Copied!");
+function toggleMode() {
+    document.body.classList.toggle("light");
 }
 </script>
-
-<!-- FOOTER -->
-<div class="section">
-    <p>Developed by <b>Nausheen Parween & Anam</b></p>
-</div>
 
 </body>
 </html>
